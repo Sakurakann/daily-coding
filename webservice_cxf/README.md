@@ -1,0 +1,17 @@
+cxf-2.3.3
+wsdl4j-1.6.2
+XmlSchema-1.4.7
+jetty-util-7.2.2
+jetty-server-7.2.2
+jetty-http-7.2.2
+jetty-io-7.2.2
+jetty-continuation-7.2.2
+log4j-1.2.16
+commons-logging-1.1.1
+neethi-2.0.4
+spring-bean
+spring-context
+spring-web
+spring-core
+spring-expression
+spring-asm
