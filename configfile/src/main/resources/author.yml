@@ -1,0 +1,15 @@
+name: sknn
+phone:
+#### 以短横线表示数组/list集合 !!!注意短横线后面的空格
+    - 5
+    - 8
+tools:
+    - name: idea
+      useAge: a
+####################### 以短横线加空格的方式来分割,以空格缩进表示类别
+    - name: eclipse
+      useAge: b
+### useAge缺省
+    - name: atom
+### name缺省
+    - useAge: c

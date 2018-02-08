@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<author>
+  <name>sknn</name>
+  <phones>
+    <phone>5</phone>
+    <phone>8</phone>
+  </phones>
+  <tools>
+    <tool>
+      <name>idea</name>
+      <useAge>a</useAge>
+    </tool>
+    <tool>
+      <name>eclipse</name>
+      <useAge>b</useAge>
+    </tool>
+    <tool>
+      <name>atom</name>
+    </tool>
+    <tool>
+      <useAge>c</useAge>
+    </tool>
+  </tools>
+</author>

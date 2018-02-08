@@ -1,0 +1,11 @@
+{
+  "name": "sknn",
+  "tools": [{
+    "name": "idea",
+    "useAge": "a"
+  },{
+    "name": "eclipse",
+    "useAge": "b"
+  }],
+  "phone": [5, 8]
+}
