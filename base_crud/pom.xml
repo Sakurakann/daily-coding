@@ -8,12 +8,14 @@
   <name>base_crud Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
+    <!-- encoding -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jetty.version>9.2.8.v20150217</jetty.version>
 
     <junit.version>4.12</junit.version>
-    <servlet-api.version>2.3</servlet-api.version>
+    <servlet-api.version>3.1.0</servlet-api.version>
     <jstl.version>1.2</jstl.version>
+    <commons.version>1.7.0</commons.version>
   </properties>
 
   <dependencies>
@@ -29,9 +31,11 @@
     <!-- servlet-api -->
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <artifactId>javax.servlet-api</artifactId>
       <version>${servlet-api.version}</version>
+      <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
@@ -41,11 +45,17 @@
 
     <!-- DB -->
     <dependency>
-      <groupId>ojdbc</groupId>
-      <artifactId>ojdbc</artifactId>
+      <groupId>com.oracle</groupId>
+      <artifactId>ojbdc14</artifactId>
       <version>14</version>
     </dependency>
     <!-- DB end -->
+
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${commons.version}</version>
+    </dependency>
 
   </dependencies>
   <build>
@@ -77,6 +87,14 @@
           <webApp>
             <contextPath>/${project.artifactId}</contextPath>
           </webApp>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
         </configuration>
       </plugin>
     </plugins>
