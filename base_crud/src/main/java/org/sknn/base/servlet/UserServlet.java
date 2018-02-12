@@ -35,7 +35,7 @@ public class UserServlet extends BaseServlet {
     Map<String, String[]> paramsMap = request.getParameterMap();
     User user = RequestParamsConverter.paramsMap2Pojo(paramsMap, User.class);
 
-    return null;
+    return "/WEB-INF/jsp/user/registerSuccess.jsp";
   }
 
   public String login(HttpServletRequest request,

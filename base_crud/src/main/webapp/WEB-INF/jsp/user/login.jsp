@@ -12,7 +12,7 @@
 </head>
 <body>
 <div align="center" style="margin-top: 100px">
-    <form action="user?cmd=login" method="post">
+    <form action="user?cmd=login" method="post" id="login-form">
         <table>
             <thead>
             <tr>
@@ -44,6 +44,7 @@
         </table>
     </form>
 </div>
+</body>
 <script type="text/javascript">
   function goRegister() {
     window.location.href = "<%=request.getContextPath()%>/user?cmd=registerPre";
@@ -53,20 +54,19 @@
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     //alert(username + " : " + password);
+    var usernameLabel = document.getElementById("username-label");
     if (username === null || "" === (username.trim())) {
-      document.getElementById(
-          "username-label").innerHTML = "UserName can not be empty!";
-      alert(false);
+      usernameLabel.innerHTML = "UserName can not be empty!";
+      //alert(false);
       return false;
     }
 
     if (username.length < 6 || username.length > 16) {
-      document.getElementById(
-          "username-label").innerHTML = "The length of username must be 6 to 16 digits";
-      alert(false);
+      usernameLabel.innerHTML = "The length of username must be 6 to 16 digits";
+      //alert(false);
       return false;
     }
+    document.getElementById("login-form").submit();
   }
 </script>
-</body>
 </html>
